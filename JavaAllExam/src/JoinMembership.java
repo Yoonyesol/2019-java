@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class JoinMembership {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Scanner str = new Scanner(System.in);
+		String id = "aljjjojopjdkjgjsjgksjgkjd";
+		String pw = "ddojflhhlo";
+		
+		System.out.println("나이를 입력해주세요.");
+		int age = sc.nextInt();
+		
+		if(age>14) {
+			System.out.println("아이큐를 입력해주세요.");
+			int iq = sc.nextInt();
+			
+			if(iq>100) { 
+			//아이디 비밀번호를 설정
+				
+				while(id.length()>=8) {
+					System.out.println("아이디를 설정해 주세요.(영어, 숫자, 특수문자 포함 8자리 이상): ");
+					id = str.nextLine();
+		
+					while(id.length()<8) {
+						System.out.println("아이디는 8자리 이상으로 설정되어야 합니다. 다시 입력해주세요.");
+						System.out.println("아이디를 설정해 주세요.(영어, 숫자, 특수문자 포함 8자리 이상): ");
+						id = str.nextLine();
+					}
+					
+					System.out.println("비밀번호를 설정해 주세요.(영어, 숫자, 특수문자 포함 4자리 이상): ");
+					
+					
+					while(pw.length()>=4) {
+						
+						pw = str.nextLine();
+						
+						while(pw.length()<4) {
+							System.out.println("비밀번호는 4자리 이상으로 설정되어야 합니다. 다시 입력해주세요.");
+							System.out.println("비밀번호를 설정해 주세요.(영어, 숫자, 특수문자 포함 4자리 이상): ");
+							pw = str.nextLine();
+						}
+						
+						System.out.println("회원가입이 완료되었습니다.");
+						
+					}
+					
+					break;
+					
+				} 
+				
+				
+			} else {
+				System.out.println("아이큐가 100이하인 경우 가입이 불가합니다.");
+			}
+		} else {
+			System.out.println("나이가 14살 미만인 경우 가입이 불가합니다.");
+		}
+
+	}
+
+}
