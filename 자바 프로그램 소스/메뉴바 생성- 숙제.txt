@@ -1,0 +1,82 @@
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class MenuEx extends JFrame {
+
+ 
+ public MenuEx() {
+  setTitle("Menu만들기 예제");
+  createMenu();
+  setSize(250,200);
+  setVisible(true);
+ }
+ 
+ private void createMenu() {
+  JMenuBar mb = new JMenuBar();
+  JMenu screenMenu = new JMenu("Screen"); //Screen 메뉴 생성
+  
+  //Screen 메뉴에 메뉴아이템 생성 삽입
+  screenMenu.add(new JMenuItem("Load")); 
+  screenMenu.add(new JMenuItem("Hide"));
+  screenMenu.add(new JMenuItem("Load"));
+  screenMenu.add(new JMenuItem("Reshow"));
+  screenMenu.addSeparator();
+  screenMenu.add(new JMenuItem("Exit"));
+  
+  
+  //메뉴바에 메뉴 삽입
+  mb.add(screenMenu);
+  mb.add(new JMenu("Edit"));
+  mb.add(new JMenu("Source"));
+  mb.add(new JMenu("Project"));
+  mb.add(new JMenu("Run"));
+  
+  
+  //메뉴바를 프레임에 부착
+  setJMenuBar(mb);
+  
+ }
+ 
+ class MenuActionListener implements ActionListener{
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+   String cmd = e.getActionCommand();
+   System.out.println("ffffff");
+   switch (cmd){
+    case "Load" :
+     System.out.println("Load가 선택되었습니다.");
+     break;
+     
+    case "Hide":
+     System.out.println("Hide가 선택되었습니다.");
+     break;
+     
+    case "Reshow":
+     System.out.println("Reshow가 선택되었습니다.");
+     break;
+    
+    case "Exit":
+     System.exit(0);
+     break;
+      
+    
+   }
+   
+  }
+  
+ }
+
+ public static void main(String[] args) {
+  new MenuEx();
+
+ }
+
+}
+ 

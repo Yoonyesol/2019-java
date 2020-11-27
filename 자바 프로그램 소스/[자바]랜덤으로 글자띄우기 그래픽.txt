@@ -1,0 +1,75 @@
+
+package ffff;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class FontEx2 extends JFrame {
+ 
+ private MyPanel panel = new MyPanel();
+ 
+ public FontEx2(){
+  setTitle ("연습문제 풀어보자");
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  add(panel);
+  setSize(650,500);
+  setVisible(true);  
+  setBackground(Color.WHITE);
+  
+ }
+ 
+ class MyPanel extends JPanel {
+  public void paintComponent(Graphics g) {
+   
+   Font f = new Font("Arial", Font.ITALIC,(int) (Math.random()*90)+10);
+   g.drawString("gjcomputer", (int)(Math.random()*500)+30, (int)(Math.random()*400)+30);
+   g.setFont(f);
+   g.setColor(Color.BLACK);
+ 
+   
+   Font s = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   g.setFont(s);
+   g.setColor(Color.red);
+   
+   
+   Font m = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   g.setFont(m);
+   g.setColor(Color.pink);
+  
+     
+   Font i = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.setFont(i);
+   g.setColor(Color.orange);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   
+   Font j = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.setFont(j);
+   g.setColor(Color.gray);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   
+   Font k = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.setFont(k);
+   g.setColor(Color.magenta);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   
+   Font l = new Font("Arial", Font.ITALIC, (int)(Math.random()*90)+10);
+   g.setFont(l);
+   g.setColor(Color.blue);
+   g.drawString("gjcomputer", (int)(Math.random()*600)+30, (int)(Math.random()*480)+30);
+   
+  }
+ }
+ 
+ 
+
+ public static void main(String[] args) {
+  FontEx2 tt = new FontEx2();
+ }
+
+}

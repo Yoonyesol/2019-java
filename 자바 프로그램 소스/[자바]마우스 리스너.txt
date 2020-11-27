@@ -1,0 +1,96 @@
+
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class MyFrameT extends JFrame {
+ public MyFrameT() {
+  add(new MyPanel());
+  
+  setSize(500,500);
+  setVisible(true);
+  
+  
+ }
+
+
+ public static void main(String[] args) {
+  new MyFrameT();
+
+ }
+
+}
+
+class MyPanel extends JPanel{
+ 
+ BufferedImage img = null;
+ 
+ int imgx =0, imgy = 0;
+ 
+ public MyPanel() {
+  
+  JLabel d = new JLabel("마우스의 상태가 표시됩니다.");
+  this.add(d);
+  
+  
+  try {
+   img = ImageIO.read(new File("ic1.jpg"));
+  } catch (IOException e) {
+   System.out.println("이미지 어딨니?");
+   System.exit(1);
+   
+  }
+  
+  addMouseListener(new MouseListener() {
+   
+   @Override
+   public void mouseReleased(MouseEvent e) {
+    d.setText("마우스가 떼어졌습니다.");
+    
+   }
+   
+   @Override
+   public void mousePressed(MouseEvent e) {
+    imgx = e.getX();
+    imgy = e.getY();
+    repaint(); //새로 바뀐 좌표로 업데이트하기 위해 필요함.
+    d.setText("마우스가 클릭되었습니다.");
+    
+    
+   }
+   
+   @Override
+   public void mouseExited(MouseEvent e) {
+    // TODO Auto-generated method stub
+    
+   }
+   
+   @Override
+   public void mouseEntered(MouseEvent e) {
+    // TODO Auto-generated method stub
+    
+   }
+   
+   @Override
+   public void mouseClicked(MouseEvent e) {
+    // TODO Auto-generated method stub
+    
+   }
+  });
+ }
+ 
+ public void paintComponent(Graphics g) {
+  super.paintComponent(g);
+  g.drawImage(img, imgx, imgy, null);
+ }
+}
+ 

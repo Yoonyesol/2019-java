@@ -1,0 +1,76 @@
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+class Text extends JFrame{
+ 
+	JButton button;
+	JLabel result;
+	JTextField nameField;
+	JTextField genField;
+	JTextField adField;
+	JTextField agField;
+ 
+	public Text() {
+		setTitle("텍스트 필드 연습하기");
+		setLayout(new FlowLayout());
+		Container c = getContentPane();
+		
+		JLabel name = new JLabel("이름");
+		nameField = new JTextField(10);
+		JLabel gender = new JLabel("성별");
+		genField = new JTextField(10);
+		JLabel adress = new JLabel("주소");
+		adField = new JTextField(10);
+		JLabel age = new JLabel("나이");
+		agField = new JTextField(10);
+		result = new JLabel("당신은 ()에 살고 있는 ()살 () ()이군요.");
+  
+		button = new JButton("입력완료");
+		button.addActionListener(new MyListener());
+  
+		c.add(name);
+		c.add(nameField);
+		c.add(gender);
+		c.add(genField);
+		c.add(adress);
+		c.add(adField);
+		c.add(age);
+		c.add(agField);
+		c.add(result);
+		c.add(button);
+		setSize(300,200);
+		setVisible (true);
+  
+	}
+ 
+ private class MyListener implements ActionListener{
+
+  @Override
+  	public void actionPerformed(ActionEvent e) {
+	  if (e.getSource()==button) {
+		  result.setText("당신은 ("+adField.getText()+")에 살고 있는 ("+agField.getText()+")살 "+"("+
+				  genField.getText()+") "+"("+nameField.getText()+")"+"이군요.");  
+   }
+   
+  }
+  
+ }
+ 
+}
+public class informEx {
+
+ public static void main(String[] args) {
+  Text n = new Text();
+
+ }
+
+}
+ 

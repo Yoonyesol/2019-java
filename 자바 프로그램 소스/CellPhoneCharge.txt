@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class CellPhoneCharge {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("사용시간을 분단위로 입력해주세요.");
+		double use = sc.nextDouble();
+		int sum = 0;
+		int chr = 0;
+		
+		while(use<=1) {
+			
+			if(use <=0.17) {
+				chr = 30;
+			} else if(use <= 0.17*2) {
+				chr = 30*2;
+			} else if(use <= 0.17*3) {
+				chr = 30*3;
+			} else if(use <= 0.17*4) {
+				chr = 30*4;
+			} else if(use <= 0.17*5) {
+				chr = 30*5;
+			} else  {
+				chr = 30*6;
+			}
+			
+			break;
+		}
+		
+		while(1<use & use<=3) {
+			if(use <=1.17) {
+				chr = 30*6 + 25;
+			} else if(use <= 1.17*2) {
+				chr = 30*6+ 25*2;
+			} else if(use <= 1.17*3) {
+				chr = 30*6+25*3;
+			} else if(use <= 1.17*4) {
+				chr = 30*6+25*4;
+			} else if(use <= 1.17*5) {
+				chr = 30*6+25*5;
+			} else if(use <= 1.17*6) {
+				chr = 30*6+25*5;
+			}else if(use <= 1.17*7) {
+				chr = 30*6+25*5;
+			}else if(use <= 1.17*8) {
+				chr = 30*6+25*6;
+			}else if(use <= 1.17*9) {
+				chr = 30*6+25*7;
+			}else if(use <= 1.17*10) {
+				chr = 30*6+25*8;
+			}else if(use <= 1.17*11) {
+				chr = 30*6+25*9;
+			}else if(use <= 1.17*12) {
+				chr = 30*6+25*10;
+			} else {
+				chr = 30*6+25*11;
+			}
+			
+			break;
+		}
+		
+		while(3<use & use<=5) {
+			chr = 20;
+			break;
+		}
+		
+		while(5<use) {
+			chr = 15;
+			break;
+		}
+		
+		System.out.println("요금: "+chr+"원");
+
+	}
+
+}

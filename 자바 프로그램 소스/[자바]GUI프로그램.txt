@@ -1,0 +1,129 @@
+import java.awt.*;
+import javax.swing.*;
+
+class MyFrame extends JFrame{
+	private JButton button;
+	private JLabel label;
+	
+	public MyFrame() {
+		
+		setSize(300,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("문제 풀이");
+		
+		
+		setLayout(null);
+		
+		JLabel textLabel = new JLabel("문제1");
+		textLabel.setSize(40, 20);
+		textLabel.setLocation(20,10);
+		JLabel textLabel2 = new JLabel("다음 중 자바에서 사용하");
+		textLabel2.setSize(150,20);
+		textLabel2.setLocation(20,60);
+		JLabel textLabel3 = new JLabel("는 명령어가 아닌것을 모");
+		textLabel3.setSize(150,20);
+		textLabel3.setLocation(20,80);
+		JLabel textLabel4 = new JLabel("두 고르시오!");
+		textLabel4.setSize(150,20);
+		textLabel4.setLocation(20,100);
+				
+		
+		
+		
+		JCheckBox p = new JCheckBox("print", true);
+		p.setSize(70,50);
+		p.setLocation(250,20);
+		JCheckBox sc = new JCheckBox("scanf");
+		sc.setSize(70,50);
+		sc.setLocation(380,20);
+		JCheckBox fo = new JCheckBox("for", true);
+		fo.setSize(70,50);
+		fo.setLocation(250,70);
+		JCheckBox i = new JCheckBox("if", true);
+		i.setSize(70,50);
+		i.setLocation(380,70);
+		JCheckBox wh = new JCheckBox("while");
+		wh.setSize(70,50);
+		wh.setLocation(250,120);
+		JCheckBox imp = new JCheckBox("import", true);
+		imp.setSize(70,50);
+		imp.setLocation(380,120);
+					
+				
+		
+		
+		JButton button =new JButton("선택완료");
+		button.setSize(130,50);
+		button.setLocation(200,200);
+		JButton button2 =new JButton("선택취소");
+		button2.setSize(130,50);
+		button2.setLocation(350,200);
+		
+			
+		
+		add(textLabel);
+		add(textLabel2);
+		add(textLabel3);
+		add(textLabel4);
+		
+		
+		add(p);
+		add(sc);
+		add(fo);
+		add(i);
+		add(wh);
+		add(imp);
+		
+		add(button);
+		add(button2);
+		
+		
+		/*
+		 JLabel textLabel = new JLabel("안녕하세요! 건준컴퓨터학원 입니다.\n 아래 과목들 중 원하는 과목을 선택하세요.");
+		
+		
+		ImageIcon cherryIcon1 = new ImageIcon("cherry1.jpg"); //해제 상태 이미지 등록
+		ImageIcon cherryIcon2 = new ImageIcon("cherry2.jpg"); //선택 상태 이미지 등록
+		
+		JCheckBox cherry = new JCheckBox("체리", cherryIcon1); //해제 상태이미지만 가진 체크박스 생성
+		cherry.setSelectedIcon(cherryIcon2); //선택 상태 이미지
+		
+		JCheckBox c = new JCheckBox("c언어", true);
+		JCheckBox sc = new JCheckBox("스크래치", true);
+		JCheckBox jv = new JCheckBox("자바");
+		JCheckBox phy = new JCheckBox("파이썬", true);
+		
+		
+		JButton button =new JButton("지우기");
+		button.setSize(100,40);
+		button.setLocation(150,20);
+		JButton button2 =new JButton("확인");
+		button.setSize(100,40);
+		button.setLocation(150,30);
+		JButton button3 =new JButton("취소");
+		button.setSize(100,40);
+		button.setLocation(150,40);
+		
+		
+		add(textLabel);
+		
+		add(c);
+		add(sc);
+		add(jv);
+		add(phy);
+		
+		add(button);
+		add(button2);
+		add(button3);*/
+		
+		setVisible(true);
+	}
+}
+public class TestEx {
+
+	public static void main(String[] args) {
+		MyFrame t = new MyFrame(); 
+		
+	}
+
+}

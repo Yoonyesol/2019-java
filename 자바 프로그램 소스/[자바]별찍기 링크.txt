@@ -1,0 +1,31 @@
+[자바] 별 찍기 기본 (이중 for문) -1
+https://blog.naver.com/jancathome/221589308040
+
+
+[자바] 별 찍기 직각삼각형(이중for문)(+로직) -2
+https://blog.naver.com/jancathome/221589310193
+
+
+
+[자바] 별 찍기 뒤집힌 직각삼각형(이중for문) -3
+https://blog.naver.com/jancathome/221590045285
+
+
+[자바] 별찍기 공백있는 직각삼각형(이중for문)(+로직) -4
+https://blog.naver.com/jancathome/221590049729
+
+
+[자바] 별 찍기 뒤집힌 공백있는 직각삼각형(이중for문)(+로직) -5
+https://blog.naver.com/jancathome/221593522652
+
+
+[자바] 별찍기 이등변삼각형(이중for문)(+알고리즘) -6
+https://blog.naver.com/jancathome/221590057293
+
+
+[자바] 별찍기 이등변삼각형 반대(이중for문)(+로직) -7
+https://blog.naver.com/jancathome/221593497090
+
+
+[자바] 별 찍기 대망의 다이아몬드!(이중 for 문)(+로직) -8
+https://blog.naver.com/jancathome/221601561914
