@@ -1,0 +1,48 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class FontEx extends JFrame {
+	
+	private MyPanel panel = new MyPanel();
+	public FontEx(){
+		setTitle("컬러와 폰트 예제");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(panel);
+		setSize(300,500);
+		setVisible(true);	
+		setBackground(Color.white);
+	}
+	
+	class MyPanel extends JPanel{
+		public void paintComponent(Graphics g) {
+			Font f = new Font("Arial",Font.LAYOUT_LEFT_TO_RIGHT, 10);
+			g.setFont(f);
+			g.setColor(Color.blue);
+			g.drawString("i love java", 30, 30);
+			
+			Font j = new Font("JokerMan",Font.ITALIC, 30);
+			g.setFont(j);
+			g.setColor(Color.red);
+			g.drawString("oh~ My java", 30, 60);
+			
+			for(int i =0; i<5; i++) {
+				Font k = new Font("JokerMan",Font.ITALIC, 10*i);
+				g.setFont(k);
+				g.setColor(Color.pink);
+				g.drawString("This is a pen", 30, 60+(40*i));
+			}
+			
+		}
+		
+	} 
+
+	public static void main(String[] args) {
+		FontEx f = new FontEx();
+
+	}
+
+}
